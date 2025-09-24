@@ -1,0 +1,203 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{hyperref}
+\usepackage{xcolor}
+\hypersetup{
+    hidelinks  % This removes all link styling including borders
+}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{https://wasath.site/}{\Large Wasath Theekshana}} & Email : \href{mailto:wasath.vt@gmail.com}{wasath.vt@gmail.com}\\
+  \href{https://wasath.site/}{https://wasath.site} & Mobile : +94 76 669 2190 \\
+\end{tabular*}
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Plymouth}{Affiliated University, NSBM Sri Lanka}
+      {Bachelor of Science in Software Engineering;  GPA: 72.03/100 | First Class  }{March. 2022 -- May. 2025}
+    \resumeSubheading
+      {De Mazenod College}{Kandana, Sri Lanka}
+      {Advance Level Examinations;  (\textbf{B} - IT, \textbf{B} - Statistics, \textbf{C} - Accounting) }{Jan. 2020 -- Feb. 2022}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Raketman}{Colombo, Sri Lanka}
+      {DevOps \& Cloud Infrastructure Engineer}{Aug 2024 - Aug 2025}
+      \resumeItemListStart
+        \resumeItem{Azure Cloud}
+          {Worked with Azure Web Apps (App Services) to deploy a highly available mobile application backend infrastructure. Created Azure Linux/Windows VMs to host production-grade applications using scale sets. Implemented Azure SQL Managed Instances within a fully secured VNET, with encryption and Azure AD/Entra authentication. Optimized the network flow of production servers by resolving VM performance issues through the implementation of proximity placement groups, peering, and private links. }
+          \resumeItem{Infrastructure as Code (IaC)}
+          {Handled all Azure Cloud infrastructure using Terraform and Terragrunt, following GitOps practices to ensure infrastructure as code was versioned and easily usable by the team. }
+        \resumeItem{Continues Integration (CI)}
+          {Created CI pipelines from scratch using GitHub Actions, Jenkins, and CircleCI, securely storing credentials in key vaults such as Doppler to ensure pipeline security. Utilized Docker for containerizing applications and stored images in Docker Hub or Azure Container Registry. Implemented Trivy to scan container images for vulnerabilities. }
+          \resumeItem{Continues Deployment (CD)}
+          {Implemented GitOps-driven Kubernetes deployments with Argo CD and built a custom CD tool using Bash to enable code pulls on private network hosts. }
+          \resumeItem{Monitoring}
+          {Implemented comprehensive monitoring by integrating Grafana, Prometheus, and Loki for Docker containers and host servers, while leveraging Azure Monitor and Log Analytics for cloud applications, improving system reliability and reducing downtime. }
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Elysian Crest}{Colombo, Sri Lanka}
+      {Software Engineer Engineer (DevOps) }{May 2024 - Aug. 2024}
+      \resumeItemListStart
+        \resumeItem{Azure Cloud}
+          {Implemented microservices architecture on Azure App Services, delivering scalable production solution for 5,000+ concurrent users with real-time performance tracking and monitoring }
+          \resumeItem{DevSecOps Pipelines}
+          {Built secure DevSecOps pipelines by integrating OWASP-based SAST/DAST testing with SonarQube and SonarCloud, strengthening application security. }
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Elysian Crest}{Colombo, Sri Lanka}
+      {Software Engineer - Intern}{Oct. 2023 - May 2024}
+      \resumeItemListStart
+      \resumeItem{DevSecOps}
+          {Developed DevSecOps pipelines with GitHub Actions, streamlining notifications and approval workflows via Microsoft Teams and Slack to enhance collaboration and deployment efficiency. }
+        \resumeItem{Notification System}
+          {Implemented a Pub-Sub notification service for a mobile application using NestJS}
+          \resumeItem{Sri Lankan Government}
+          { Made the full CI/CD Production environment of Integrated Water \& 
+Watershed Resource Management Project (IWWRMP) Web \& CMS with 
+Azure Cloud. All the pipelines are built with GitHub Actions \& 
+infrastructure is automated with Terraform API Workflows.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeSubItem{Doctor CD}
+      {Built an open-source CD tool in Golang to enable Docker Compose–based application deployments, providing a lightweight alternative for teams without Kubernetes clusters. }
+    \resumeSubItem{DevSecOps Pipeline with K8S \& Terraform}
+      {Built end-to-end DevSecOps pipelines on Azure using Terraform for infrastructure, Argo CD for Kubernetes configuration management, Trivy for security scans, Nexus for Maven artifact hosting, and SonarQube for code quality reporting, all orchestrated via Jenkins pipelines to streamline secure and reliable application delivery. }
+    \resumeSubItem{Helm Based K8S Deployment}
+      {Developed and deployed a three-tier application using custom Helm charts to efficiently manage configuration versions and streamline updates. }
+%     \resumeSubItem{Mac Setup}
+%       {Book that gives step by step instructions on setting up developer environment on Mac OS.}
+  \resumeSubHeadingListEnd
+
+%
+%--------PROGRAMMING SKILLS------------
+\section{Programming Skills}
+ \resumeSubHeadingListStart
+   \item{
+     \textbf{Programming Languages}{: Golang, JavaScript, Python, TypeScript, C,  C, Java}
+     \newline
+     \textbf{Scripting Languages}{: Bash, Power Shell}
+     \newline
+     \textbf{Technologies}{: AWS, Azure, GCP, ELK Stack, Git, GitHub, Jenkins, Circle CI, Azure DevOps, Terraform}
+     \textbf{Frameworks, Tools \& Libraries}{: ReactJS, NextJS, Astro, NestJS, NodeJS, Trivy, SonarQube, Nexus}
+     
+   }
+ \resumeSubHeadingListEnd
+
+
+ %-----------Volunteering Experience----------------
+\section{Volunteering Experience}
+  \resumeSubHeadingListStart
+  \resumeSubheading
+      {FOSS Community of NSBM}{Colombo, Sri Lanka}
+      {Club Captain \& Technical Lead}{May 2022 - May 2023}
+      \resumeItemListStart
+        \resumeItem{Events \& Contributions}
+          {Organized more than 20 tech events, built platforms to help the events with MERN Stack, AWS \& , and created automated workflows with GitHub Actions to improve the developer experience. Leading Microsoft Student Learn sub community named “Devoke” \& Organize Azure Cloud Skill programs among university students. }
+      \resumeItemListEnd
+
+        \resumeSubheading
+      {Microsoft Learn Student Ambassador}{Microsoft}
+      {Student Ambassador}{April 2023 - Oct. 2024}
+      \resumeItemListStart
+        \resumeItem{Events \& Contributions}
+          {Member of the Organizing committee of Microsoft Build After Party 2023 Share the knowledge about Azure Cloud Services among the University communities to keep in touch with cloud services }
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+   %-----------Achievements-----------------
+\section{Achievements}
+   \resumeSubHeadingListStart
+   
+     \textbf{CYPHER 2023}{: Won the 5th place for the algorithmic based Hackathon (CYPHER 2023) organized by KDU Sri Lanka. }
+     \newline
+     \textbf{Bashaway 2023}{: Bash Scripting Competition - Won 13th place among 110 teams - Organized by SLIIT  }
+
+ \resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}
